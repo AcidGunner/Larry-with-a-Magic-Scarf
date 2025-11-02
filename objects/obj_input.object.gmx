@@ -73,13 +73,13 @@ stick_rv=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if os_type==os_win32 or os_type==os_windows
+            <string>if (os_type==os_win32 or os_type==os_windows) &amp;&amp; !gamepad_is_connected(0)
 {
     up=keyboard_check(vk_up);
     down=keyboard_check(vk_down);
     right=keyboard_check(vk_right);
     left=keyboard_check(vk_left);
-    start=keyboard_check_pressed(vk_up);
+    start=keyboard_check_pressed(vk_enter);
     lef=keyboard_check_pressed(vk_left);
     rig=keyboard_check_pressed(vk_right);
     dow=keyboard_check_pressed(vk_down);
@@ -91,7 +91,7 @@ stick_rv=0;
     bh=keyboard_check(ord('X'));
     ch=keyboard_check(vk_lshift);
 }
-else if os_type==os_ps3
+else if os_type==os_ps3 or gamepad_is_connected(0)
 {
     //Prepare the CONSOLE MOVEMENTS!!!!
     if (!variable_global_exists("prev_stick_h")) {

@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>490</xoffset>
-    <yoffset>204</yoffset>
+    <xoffset>-318</xoffset>
+    <yoffset>-12</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="-1" name="bg_back1" x="0" y="0" htiled="-1" vtiled="-1" hspeed="-1" vspeed="0" stretch="0"/>
@@ -81,8 +81,6 @@
     <instance objName="obj_collision" x="5600" y="160" name="inst_2EF63822" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="5056" y="192" name="inst_8D0E56BD" locked="0" code="" scaleX="14" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="5280" y="208" name="inst_9A0E5CBD" locked="0" code="" scaleX="12" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_debug" x="16" y="384" name="inst_00A6374C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_first" x="32" y="384" name="inst_053B8E71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy1" x="320" y="160" name="inst_EF2D5DDC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

@@ -2,8 +2,8 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
-  <depth>0</depth>
+  <visible>0</visible>
+  <depth>-1000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,9 +25,43 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.FSP=60;
-global.showfps=1;
-init_globals_mus();
+            <string>///Predefined variables
+
+_audio = noone;
+_loop_begin = 0;
+_loop_end = 0;
+_transition_delay = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Loop the sound
+
+if (audio_is_playing(_audio)) {
+
+    if (audio_sound_get_track_position(_audio) &gt;= _loop_end-_transition_delay)
+        audio_sound_set_track_position(_audio,_loop_begin);
+}
+else
+    instance_destroy();
 </string>
           </argument>
         </arguments>

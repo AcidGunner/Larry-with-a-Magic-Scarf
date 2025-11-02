@@ -6,7 +6,10 @@
   <NewExtensions>
     <extension index="0">extensions\GMSched</extension>
   </NewExtensions>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\mus_title</sound>
+    <sound>sound\mus_stwib</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Larry">
       <sprite>sprites\spr_larry_hitbox</sprite>
@@ -15,6 +18,7 @@
       <sprite>sprites\spr_larry_dash</sprite>
       <sprite>sprites\spr_larry_jump</sprite>
       <sprite>sprites\spr_larry_walk</sprite>
+      <sprite>sprites\spr_larry_title</sprite>
     </sprites>
     <sprites name="Debug">
       <sprite>sprites\spr_block</sprite>
@@ -29,6 +33,10 @@
     <background>background\bg_back2</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\audio_loop_sound.gml</script>
+    <script>scripts\init_globals_mus.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_debug</object>
     <object>objects\obj_first</object>
@@ -37,8 +45,11 @@
     <object>objects\obj_input</object>
     <object>objects\obj_test</object>
     <object>objects\obj_enemy1</object>
+    <object>objects\obj_audio_loop</object>
+    <object>objects\obj_title</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_title</room>
     <room>rooms\rm_room1</room>
   </rooms>
   <help>
