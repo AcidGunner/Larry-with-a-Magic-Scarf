@@ -6,5 +6,3 @@ Source code for Larry with a Magic Scarf (in development tho :D)
 <<<<<<< HEAD
 > 
 > The game's version is currently at 0.01a! OST and sprites may differ
-=======
->>>>>>> 4abff355b6014ccca661353491cc56fe222d7d30
