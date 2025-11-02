@@ -41,8 +41,10 @@ dow=0;
 upp=0;
 a=0;
 b=0;
+c=0;
 ah=0;
 bh=0;
+ch=0;
 
 //PS3 ONLY VALUES
 gmin=0.4;
@@ -84,8 +86,10 @@ stick_rv=0;
     upp=keyboard_check_pressed(vk_up);
     a=keyboard_check_pressed(ord('Z'));
     b=keyboard_check_pressed(ord('X'));
+    c=keyboard_check_pressed(vk_lshift);
     ah=keyboard_check(ord('Z'));
     bh=keyboard_check(ord('X'));
+    ch=keyboard_check(vk_lshift);
 }
 else if os_type==os_ps3
 {
@@ -112,8 +116,10 @@ else if os_type==os_ps3
     upp=gamepad_button_check_pressed(0,gp_padu) or (stick_v&lt;=-gmin &amp;&amp; global.prev_stick_v&gt;-gmin);
     a=gamepad_button_check_pressed(0,gp_face1);
     b=gamepad_button_check_pressed(0,gp_face2);
+    c=gamepad_button_check_pressed(0,gp_face3);
     ah=gamepad_button_check(0,gp_face1);
     bh=gamepad_button_check(0,gp_face2);
+    ch=gamepad_button_check(0,gp_face3);
     
     global.prev_stick_h = stick_h;
     global.prev_stick_v = stick_v;
