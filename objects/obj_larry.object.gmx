@@ -63,10 +63,7 @@ move=-obj_input.left+obj_input.right;
 hsp=move*movsp;
 if vsp&lt;10 vsp+=grav;
 
-if place_meeting(x,y+1,obj_collision)
-{
-    vsp=obj_input.a*-jmpsp;
-}
+if place_meeting(x,y+1,obj_collision) vsp=obj_input.a*-jmpsp;
 
 if obj_input.b &amp;&amp; move!=0 &amp;&amp; dash_cd=0
 {
@@ -79,10 +76,7 @@ if dash_cd&gt;0 dash_cd--;
 // Horizontal Movement
 if place_meeting(x+hsp,y,obj_collision)
 {
-    while !place_meeting(x+sign(hsp),y,obj_collision)
-    {
-        x+=sign(hsp);
-    }
+    while !place_meeting(x+sign(hsp),y,obj_collision) x+=sign(hsp);
     hsp=0;
 }
 x+=hsp;
@@ -90,10 +84,7 @@ x+=hsp;
 // Vertical Movement
 if place_meeting(x,y+vsp,obj_collision)
 {
-    while !place_meeting(x,y+sign(vsp),obj_collision)
-    {
-        y+=sign(vsp);
-    }
+    while !place_meeting(x,y+sign(vsp),obj_collision) y+=sign(vsp);
     vsp=0;
 }
 y+=vsp;
@@ -106,10 +97,7 @@ else if abs(hsp)&gt;0 sprite_index=spr_larry_walk
 else sprite_index=spr_larry_idle
 
 // Animate
-if move!=0
-{
-    image_xscale=move;
-}
+if move!=0 image_xscale=move;
 image_speed=0.25;
 
 // Fall to VOID
