@@ -26,13 +26,13 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>0</page>
-    <xoffset>-617</xoffset>
-    <yoffset>-159</yoffset>
+    <page>3</page>
+    <xoffset>-173</xoffset>
+    <yoffset>12</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
-    <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="-1" name="bg_back1" x="0" y="0" htiled="-1" vtiled="-1" hspeed="-1" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bg_back2" x="0" y="0" htiled="-1" vtiled="-1" hspeed="1" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -54,9 +54,9 @@
     <instance objName="obj_larry" x="96" y="200" name="inst_4CF641FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="0" y="224" name="inst_00ADAE03" locked="0" code="" scaleX="40" scaleY="10" colour="4294967295" rotation="0"/>
     <instance objName="obj_input" x="0" y="384" name="inst_F5C76FBF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision" x="-160" y="0" name="inst_0630CE29" locked="0" code="" scaleX="11.7333335876465" scaleY="24.533332824707" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="-432" y="-64" name="inst_0630CE29" locked="0" code="" scaleX="27" scaleY="28.7999992370605" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="256" y="176" name="inst_FE2B0EC7" locked="0" code="" scaleX="10" scaleY="3" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision" x="-176" y="-32" name="inst_1BEDBEEC" locked="0" code="" scaleX="411" scaleY="7" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="-160" y="-48" name="inst_1BEDBEEC" locked="0" code="" scaleX="411" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="704" y="224" name="inst_9CBEF6D8" locked="0" code="" scaleX="24" scaleY="10" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="1216" y="208" name="inst_3F9D960E" locked="0" code="" scaleX="33" scaleY="11" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="1952" y="208" name="inst_1376FEA1" locked="0" code="" scaleX="35.2000007629395" scaleY="14" colour="4294967295" rotation="0"/>
@@ -67,7 +67,22 @@
     <instance objName="obj_collision" x="4208" y="256" name="inst_3A8BF291" locked="0" code="" scaleX="9" scaleY="28" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="3968" y="288" name="inst_949B5C0C" locked="0" code="" scaleX="7" scaleY="16" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="4432" y="240" name="inst_903EB23F" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision" x="3024" y="288" name="inst_E192A91A" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="2992" y="288" name="inst_E192A91A" locked="0" code="" scaleX="10" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="1824" y="208" name="inst_13F551C6" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="2624" y="224" name="inst_9329A2F6" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="4848" y="176" name="inst_40C11489" locked="0" code="" scaleX="14" scaleY="4" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="1136" y="224" name="inst_9EF6F9A7" locked="0" code="" scaleX="2.13333344459534" scaleY="1.06666672229767" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="3888" y="304" name="inst_30920575" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="4128" y="272" name="inst_503D3EC3" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="4848" y="64" name="inst_52B5C23A" locked="0" code="" scaleX="14" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="5072" y="64" name="inst_A84C9A86" locked="0" code="" scaleX="39" scaleY="4" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="5280" y="128" name="inst_20263B3E" locked="0" code="" scaleX="26" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="5472" y="144" name="inst_78D9628C" locked="0" code="" scaleX="14" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="5600" y="160" name="inst_2EF63822" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="5056" y="192" name="inst_8D0E56BD" locked="0" code="" scaleX="14" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="5280" y="208" name="inst_9A0E5CBD" locked="0" code="" scaleX="12" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_debug" x="16" y="384" name="inst_00A6374C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_first" x="32" y="384" name="inst_053B8E71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
