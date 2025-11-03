@@ -9,6 +9,11 @@
   <sounds name="sound">
     <sound>sound\mus_title</sound>
     <sound>sound\mus_stwib</sound>
+    <sound>sound\snd_jump</sound>
+    <sound>sound\snd_pause</sound>
+    <sound>sound\snd_fall</sound>
+    <sound>sound\snd_hurt</sound>
+    <sound>sound\snd_dash</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Larry">
@@ -22,6 +27,7 @@
     </sprites>
     <sprites name="Debug">
       <sprite>sprites\spr_block</sprite>
+      <sprite>sprites\spr_block1</sprite>
       <sprite>sprites\spr_test</sprite>
     </sprites>
     <sprites name="Enemies">
@@ -47,6 +53,7 @@
     <object>objects\obj_enemy1</object>
     <object>objects\obj_audio_loop</object>
     <object>objects\obj_title</object>
+    <object>objects\obj_enemy_collision</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_title</room>
