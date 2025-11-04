@@ -14,6 +14,7 @@
     <sound>sound\snd_fall</sound>
     <sound>sound\snd_hurt</sound>
     <sound>sound\snd_dash</sound>
+    <sound>sound\snd_checkpoint</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Larry">
@@ -27,8 +28,10 @@
     </sprites>
     <sprites name="Debug">
       <sprite>sprites\spr_block</sprite>
+      <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_block1</sprite>
       <sprite>sprites\spr_test</sprite>
+      <sprite>sprites\spr_checkpoint</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\spr_enemy1_idle</sprite>
@@ -48,15 +51,20 @@
     <object>objects\obj_first</object>
     <object>objects\obj_larry</object>
     <object>objects\obj_collision</object>
+    <object>objects\obj_platform</object>
     <object>objects\obj_input</object>
     <object>objects\obj_test</object>
     <object>objects\obj_enemy1</object>
     <object>objects\obj_audio_loop</object>
     <object>objects\obj_title</object>
     <object>objects\obj_enemy_collision</object>
+    <object>objects\obj_checkpoint</object>
+    <object>objects\obj_door</object>
+    <object>objects\obj_dialogue</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_title</room>
+    <room>rooms\rm_dialogue</room>
     <room>rooms\rm_room1</room>
   </rooms>
   <help>

@@ -51,7 +51,7 @@
             <string>if obj_input.start
 {
     audio_stop_sound(mus_title);
-    room_goto(rm_room1)
+    room_goto(rm_dialogue)
 }
 </string>
           </argument>
@@ -78,7 +78,7 @@
             <string>draw_self();
 draw_text(20,20,"Larry with a Magic Scarf");
 draw_text(20,40,"JAM Version");
-draw_text(200,60+5*sin(current_time/400),"Version 0.01A");
+draw_text(200,60+5*sin(current_time/800),"Version 0.01A");
 
 draw_text(20,100,"CONTROLS:
 
