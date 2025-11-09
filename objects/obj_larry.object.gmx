@@ -35,12 +35,9 @@ move=0;
 cam_sway=200;
 dash_cd=0;
 attack_cd=0;
-lives=4;
-background_hspeed[0]=-0.5;
 immune=0;
 
 //instance_create(-928,0,obj_test);
-audio_loop_sound(global._music[1],global._st[1],global._en[1],44100,0);
 </string>
           </argument>
         </arguments>
@@ -97,8 +94,24 @@ if place_meeting(x,y+vsp,obj_collision)
 }
 y+=vsp;
 
+// Slope test
+if place_meeting(x+2,y+2,obj_slope) &amp;&amp; move==1
+{
+    //show_debug_message("touching slope test "+string(current_time));
+    x+=2;
+    y-=2;
+}
+
+// Slope test
+if place_meeting(x+16,y+16,obj_slope) &amp;&amp; move==-1 &amp;&amp; !place_meeting(x+16,y+32,obj_collision_slope)
+{
+    //show_debug_message("touching back slope test "+string(current_time));
+    y+=2;
+}
+
 // Sprites
 if movsp&gt;4.7 sprite_index=spr_larry_dash
+else if (place_meeting(x,y+12,obj_slope) &amp;&amp; move!=0) sprite_index=spr_larry_walk
 else if vsp&lt;0 sprite_index=spr_larry_jump
 else if vsp&gt;0 sprite_index=spr_larry_fall
 else if abs(hsp)&gt;0 sprite_index=spr_larry_walk
@@ -130,9 +143,22 @@ movsp=lerp(movsp,3,0.06);
 jmpsp=lerp(jmpsp,7,0.1);
 immune=lerp(immune,0,0.06);
 
-if lives=0
+if room==rm_room2
 {
-    game_end();
+    if view_yview[0]&gt;0 view_yview[0]=0
+    else if view_yview[0]&lt;-200 view_yview[0]=-200
+    
+    if view_yview[0]&lt;=0 &amp;&amp; view_yview[0]&gt;=-200
+    {
+        view_yview[0]=lerp(view_yview[0],y-216,0.06);
+    }
+    //window_set_caption(string(view_yview[0]))
+}
+
+if lives&lt;=0
+{
+    show_message("Game over.# #Try again.")
+    game_restart();
 }
 </string>
           </argument>

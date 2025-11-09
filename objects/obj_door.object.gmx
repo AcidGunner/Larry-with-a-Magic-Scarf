@@ -28,8 +28,9 @@
             <string>if obj_input.upp
 {
     audio_stop_all();
-    show_message("Coming soon...");
-    room_goto(rm_title);
+    global.spawnx=32;
+    global.spawny=216;
+    room_goto(rm_room2);
 }
 </string>
           </argument>

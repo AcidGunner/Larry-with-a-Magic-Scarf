@@ -7,14 +7,20 @@
     <extension index="0">extensions\GMSched</extension>
   </NewExtensions>
   <sounds name="sound">
-    <sound>sound\mus_title</sound>
-    <sound>sound\mus_stwib</sound>
-    <sound>sound\snd_jump</sound>
-    <sound>sound\snd_pause</sound>
-    <sound>sound\snd_fall</sound>
-    <sound>sound\snd_hurt</sound>
-    <sound>sound\snd_dash</sound>
-    <sound>sound\snd_checkpoint</sound>
+    <sounds name="Music">
+      <sound>sound\mus_title</sound>
+      <sound>sound\mus_stwib</sound>
+      <sound>sound\mus_evtow</sound>
+      <sound>sound\mus_danger</sound>
+    </sounds>
+    <sounds name="SFX">
+      <sound>sound\snd_jump</sound>
+      <sound>sound\snd_pause</sound>
+      <sound>sound\snd_hurt</sound>
+      <sound>sound\snd_fall</sound>
+      <sound>sound\snd_dash</sound>
+      <sound>sound\snd_checkpoint</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Larry">
@@ -28,6 +34,7 @@
     </sprites>
     <sprites name="Debug">
       <sprite>sprites\spr_block</sprite>
+      <sprite>sprites\spr_slope</sprite>
       <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_block1</sprite>
       <sprite>sprites\spr_test</sprite>
@@ -40,17 +47,23 @@
   <backgrounds name="background">
     <background>background\bg_back1</background>
     <background>background\bg_back2</background>
+    <background>background\bg_tileset</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\audio_loop_sound.gml</script>
     <script>scripts\init_globals_mus.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_debug</object>
     <object>objects\obj_first</object>
     <object>objects\obj_larry</object>
     <object>objects\obj_collision</object>
+    <object>objects\obj_collision_slope</object>
+    <object>objects\obj_slope</object>
     <object>objects\obj_platform</object>
     <object>objects\obj_input</object>
     <object>objects\obj_test</object>
@@ -61,11 +74,13 @@
     <object>objects\obj_checkpoint</object>
     <object>objects\obj_door</object>
     <object>objects\obj_dialogue</object>
+    <object>objects\obj_gui</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_title</room>
     <room>rooms\rm_dialogue</room>
     <room>rooms\rm_room1</room>
+    <room>rooms\rm_room2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

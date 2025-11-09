@@ -50,8 +50,8 @@
             <kind>1</kind>
             <string>if obj_input.start
 {
-    audio_stop_sound(mus_title);
-    room_goto(rm_dialogue)
+    audio_stop_sound(mus_title); 
+    room_goto(rm_dialogue);
 }
 </string>
           </argument>
@@ -76,31 +76,29 @@
           <argument>
             <kind>1</kind>
             <string>draw_self();
-draw_text(20,20,"Larry with a Magic Scarf");
-draw_text(20,40,"JAM Version");
-draw_text(200,60+5*sin(current_time/800),"Version 0.01A");
+draw_text(20,20,"Larry with a Magic Scarf [JAM Version]");
+draw_text(235,45+5*sin(current_time/800),"Version 0.02A");
 
-draw_text(20,100,"CONTROLS:
-
-Arrows - Move
-Z - Jump
-LShift - Dash
+draw_text(20,60,"CONTROLS:
+Arrows - Move, Z - Jump, LShift - Dash
 
 GAMEPAD CONTROLS:
+LAxis/DPad - Move, A/Cross - Jump,
+X/Square - Dash
 
-LAxis/DPad - Move
-A/Cross - Jump
-X/Square - Dash");
+WHAT'S NEW???:
+Replaced title audio, new room, ui update,
+tilesets and.. thats it?");
 
-draw_text(20,320,"Press Start to begin.")
+draw_text(20,320+5*sin(current_time/2000),"[Press Start to begin.]")
 
 //THE SCARF
 draw_set_colour(c_orange);
 var cy = sin(current_time/600);
 var by = sin(current_time/400);
-draw_line_width(471+10,259,471-10,259,6)
-draw_line_width(471+111,259-(12*cy),471,259,6)
-draw_line_width(471+237,259-(12*by),471,259,6)
+draw_line_width(500+10,259,500-10,259,6)
+draw_line_width(500+111,259-(12*cy),500,259,6)
+draw_line_width(500+237,259-(12*by),500,259,6)
 
 draw_set_colour(c_white);
 </string>

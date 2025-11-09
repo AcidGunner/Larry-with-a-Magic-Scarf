@@ -85,13 +85,14 @@ if os_type==os_windows or os_type==os_win32
           <argument>
             <kind>1</kind>
             <string>draw_set_colour(c_white);
+draw_set_font(font0)
 draw_set_alpha(1);
 draw_set_valign(fa_top);
 draw_set_halign(fa_left);
-display_set_gui_size(1280,720)
-if toexit&gt;0 draw_text(5,695,"EXITING! PLEASE HOLD...");
+display_set_gui_size(640,360)
+if toexit&gt;0 draw_text(425,338,"EXITING! PLEASE HOLD...");
 
-if global.showfps=1 draw_text(5,5,
+if global.showfps=1 draw_text(2,2,
     "FPS: " + string(fps)
 );
 </string>
