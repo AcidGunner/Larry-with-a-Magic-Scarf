@@ -54,53 +54,59 @@ vsp=0;
           <argument>
             <kind>1</kind>
             <string>// EMEMY AI
-
-hsp=dir*movsp;
-vsp+=grav;
-
-// Horizontal Movement
-if place_meeting(x+hsp,y,obj_enemy_collision)
+if global.pause==0
 {
-    while !place_meeting(x+sign(hsp),y,obj_enemy_collision) x+=sign(hsp);
-    hsp=0;
-    dir*=-1;
-}
-x+=hsp;
-
-// Vertical Movement
-if place_meeting(x,y+vsp,obj_enemy_collision)
-{
-    while !place_meeting(x,y+sign(vsp),obj_enemy_collision) y+=sign(vsp);
-    vsp=0;
-}
-y+=vsp;
-
-if place_meeting(x,y,obj_larry)
-{
-    if obj_larry.movsp&gt;4.7
+    hsp=dir*movsp;
+    vsp+=grav;
+    
+    // Horizontal Movement
+    if place_meeting(x+hsp,y,obj_enemy_collision)
     {
-        with obj_larry
-        {
-            movsp=-5;
-        }
-        score+=100;
-        instance_destroy();
+        while !place_meeting(x+sign(hsp),y,obj_enemy_collision) x+=sign(hsp);
+        hsp=0;
+        dir*=-1;
     }
-    else if obj_larry.immune&lt;=0.01
+    x+=hsp;
+    
+    // Vertical Movement
+    if place_meeting(x,y+vsp,obj_enemy_collision)
     {
-        with obj_larry
+        while !place_meeting(x,y+sign(vsp),obj_enemy_collision) y+=sign(vsp);
+        vsp=0;
+    }
+    y+=vsp;
+    
+    if place_meeting(x,y,obj_larry)
+    {
+        if obj_larry.movsp&gt;4.7
         {
-            audio_play_sound(snd_hurt,2,false);
-            movsp=-5;
-            immune=10;
-            lives-=1;
+            with obj_larry
+            {
+                movsp=-5;
+            }
+            score+=100;
+            instance_destroy();
+        }
+        else if obj_larry.immune&lt;=0.01
+        {
+            with obj_larry
+            {
+                audio_play_sound(snd_hurt,2,false);
+                movsp=-5;
+                immune=10;
+                lives-=1;
+            }
         }
     }
+    
+    // Other
+    image_speed=0.1;
+    image_xscale=-dir;
 }
-
-// Other
-image_speed=0.1;
-image_xscale=-dir;
+else
+{
+    image_speed=0;
+}
 </string>
           </argument>
         </arguments>

@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>audio_loop_sound(global._music[0],global._st[0],global._en[0],44100,0);
+global.spawnx=96;
+global.spawny=200;
 </string>
           </argument>
         </arguments>
@@ -77,18 +79,16 @@
             <kind>1</kind>
             <string>draw_self();
 draw_text(20,20,"Larry with a Magic Scarf [JAM Version]");
-draw_text(235,45+5*sin(current_time/800),"Version 0.02A");
+draw_text(235,45+5*sin(current_time/800),get_version());
 
-draw_text(20,60,"CONTROLS:
+draw_text(20,60,"KEYBOARD CONTROLS:
 Arrows - Move, Z - Jump, LShift - Dash
 
 GAMEPAD CONTROLS:
 LAxis/DPad - Move, A/Cross - Jump,
 X/Square - Dash
 
-WHAT'S NEW???:
-Replaced title audio, new room, ui update,
-tilesets and.. thats it?");
+JAM SUBMITION CONDIDATE 1 (JSC1)");
 
 draw_text(20,320+5*sin(current_time/2000),"[Press Start to begin.]")
 

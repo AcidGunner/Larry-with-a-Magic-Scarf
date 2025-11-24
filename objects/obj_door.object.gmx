@@ -28,9 +28,18 @@
             <string>if obj_input.upp
 {
     audio_stop_all();
-    global.spawnx=32;
-    global.spawny=216;
-    room_goto(rm_room2);
+    if room=rm_room1
+    {
+        global.spawnx=32;
+        global.spawny=216;
+        room_goto(rm_room2);
+    }
+    else if room=rm_room2
+    {
+        global.spawnx=32;
+        global.spawny=280;
+        room_goto(rm_room3);
+    }
 }
 </string>
           </argument>

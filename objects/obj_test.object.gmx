@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hspeed=0;
+            <string>///Why did I left it here?
+hspeed=0;
 </string>
           </argument>
         </arguments>
@@ -48,9 +49,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>y=0;
+            <string>///Nevermind. Let him do the thing if summoned.
+y=0;
 hspeed=lerp(hspeed,11,0.005);
-window_set_caption(hspeed);
 </string>
           </argument>
         </arguments>
@@ -73,7 +74,8 @@ window_set_caption(hspeed);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>game_end();
+            <string>///GOT you.
+game_end();
 </string>
           </argument>
         </arguments>

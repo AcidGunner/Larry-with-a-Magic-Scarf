@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Init
-grav=0.46;
+grav=0.4;
 vsp=0;
 hsp=0;
 jmpsp=7;
@@ -36,8 +36,39 @@ cam_sway=200;
 dash_cd=0;
 attack_cd=0;
 immune=0;
-
+cy=0;
+by=0;
 //instance_create(-928,0,obj_test);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Death
+x=global.spawnx;
+y=global.spawny;
+cam_sway=200;
+immune=10;
+lives-=1;
+image_xscale=1;
+audio_play_sound(snd_fall,3,false);
 </string>
           </argument>
         </arguments>
@@ -61,104 +92,113 @@ immune=0;
           <argument>
             <kind>1</kind>
             <string>/// Main 
-move=-obj_input.left+obj_input.right;
-hsp=move*movsp;
-if vsp&lt;10 vsp+=grav;
-
-if place_meeting(x,y+1,obj_collision) vsp=obj_input.a*-jmpsp;
-
-if vsp&lt;=-jmpsp+0.3 audio_play_sound(snd_jump,2,false);
-
-if obj_input.c &amp;&amp; move!=0 &amp;&amp; dash_cd=0
+if global.pause==0
 {
-    audio_play_sound(snd_dash,2,false);
-    dash_cd=global.FSP*1.5;
-    movsp=9;
-}
-
-if dash_cd&gt;0 dash_cd--;
-
-// Horizontal Movement
-if place_meeting(x+hsp,y,obj_collision)
-{
-    while !place_meeting(x+sign(hsp),y,obj_collision) x+=sign(hsp);
-    hsp=0;
-}
-x+=hsp;
-
-// Vertical Movement
-if place_meeting(x,y+vsp,obj_collision)
-{
-    while !place_meeting(x,y+sign(vsp),obj_collision) y+=sign(vsp);
-    vsp=0;
-}
-y+=vsp;
-
-// Slope test
-if place_meeting(x+2,y+2,obj_slope) &amp;&amp; move==1
-{
-    //show_debug_message("touching slope test "+string(current_time));
-    x+=2;
-    y-=2;
-}
-
-// Slope test
-if place_meeting(x+16,y+16,obj_slope) &amp;&amp; move==-1 &amp;&amp; !place_meeting(x+16,y+32,obj_collision_slope)
-{
-    //show_debug_message("touching back slope test "+string(current_time));
-    y+=2;
-}
-
-// Sprites
-if movsp&gt;4.7 sprite_index=spr_larry_dash
-else if (place_meeting(x,y+12,obj_slope) &amp;&amp; move!=0) sprite_index=spr_larry_walk
-else if vsp&lt;0 sprite_index=spr_larry_jump
-else if vsp&gt;0 sprite_index=spr_larry_fall
-else if abs(hsp)&gt;0 sprite_index=spr_larry_walk
-else sprite_index=spr_larry_idle
-
-// Animate
-if move!=0 image_xscale=move;
-image_speed=0.25;
-
-// Fall to VOID
-if y&gt;=400
-{
-    x=global.spawnx;
-    y=global.spawny;
-    cam_sway=200;
-    immune=10;
-    lives-=1;
-    image_xscale=1;
-    audio_play_sound(snd_fall,3,false);
-};
-
-// Camera
-if move==1 cam_sway=200;
-else if move==-1 cam_sway=300;
-
-// Smooth stuff?
-view_xview[0]=lerp(view_xview[0],x-cam_sway,0.06);
-movsp=lerp(movsp,3,0.06);
-jmpsp=lerp(jmpsp,7,0.1);
-immune=lerp(immune,0,0.06);
-
-if room==rm_room2
-{
-    if view_yview[0]&gt;0 view_yview[0]=0
-    else if view_yview[0]&lt;-200 view_yview[0]=-200
+    move=-obj_input.left+obj_input.right;
+    hsp=move*movsp;
+    if vsp&lt;10 vsp+=grav;
     
-    if view_yview[0]&lt;=0 &amp;&amp; view_yview[0]&gt;=-200
+    if place_meeting(x,y+1,obj_collision) vsp=obj_input.a*-jmpsp;
+    
+    if vsp&lt;=-jmpsp+0.3 audio_play_sound(snd_jump,2,false);
+    
+    if obj_input.c &amp;&amp; move!=0 &amp;&amp; dash_cd=0
     {
-        view_yview[0]=lerp(view_yview[0],y-216,0.06);
+        audio_play_sound(snd_dash,2,false);
+        dash_cd=global.FSP*1.5;
+        movsp=9;
     }
-    //window_set_caption(string(view_yview[0]))
+
+    if dash_cd&gt;0 dash_cd--;
+    
+    // Horizontal Movement
+    if place_meeting(x+hsp,y,obj_collision)
+    {
+        while !place_meeting(x+sign(hsp),y,obj_collision) x+=sign(hsp);
+        hsp=0;
+    }
+    x+=hsp;
+    
+    // Vertical Movement
+    if place_meeting(x,y+vsp,obj_collision)
+    {
+        while !place_meeting(x,y+sign(vsp),obj_collision) y+=sign(vsp);
+        vsp=0;
+    }
+    y+=vsp;
+    
+    // Slope test
+    if place_meeting(x+2,y+2,obj_slope) &amp;&amp; move==1
+    {
+        x+=2;
+        y-=2;
+    }
+    
+    // Slope test
+    if place_meeting(x+16,y+16,obj_slope) &amp;&amp; move==-1 &amp;&amp; !place_meeting(x+16,y+32,obj_collision_slope)
+    {
+        y+=2;
+    }
+    
+    // Sprites
+    if movsp&gt;4.7 sprite_index=spr_larry_dash
+    else if (place_meeting(x,y+12,obj_slope) &amp;&amp; move!=0) sprite_index=spr_larry_walk
+    else if vsp&lt;0 sprite_index=spr_larry_jump
+    else if vsp&gt;0 sprite_index=spr_larry_fall
+    else if abs(hsp)&gt;0 sprite_index=spr_larry_walk
+    else sprite_index=spr_larry_idle
+    
+    // Animate
+    if move!=0 image_xscale=move;
+    image_speed=0.25;
+    
+    // Fall to VOID
+    if y&gt;=400 &amp;&amp; room!=rm_room2
+    {
+        alarm[0]=1;
+    }
+    else if y&gt;=560
+    {
+        alarm[0]=1;
+    };
+    
+    // Camera
+    if move==1 cam_sway=200;
+    else if move==-1 cam_sway=300;
+    
+    // Smooth stuff?
+    view_xview[0]=lerp(view_xview[0],x-cam_sway,0.06);
+    movsp=lerp(movsp,3,0.06);
+    jmpsp=lerp(jmpsp,7,0.1);
+    immune=lerp(immune,0,0.06);
+    
+    if room==rm_room2
+    {
+        if view_yview[0]&gt;160 view_yview[0]=160
+        else if view_yview[0]&lt;-200 view_yview[0]=-200
+        
+        if view_yview[0]&lt;=160 &amp;&amp; view_yview[0]&gt;=-200
+        {
+            view_yview[0]=lerp(view_yview[0],y-216,0.06);
+        }
+    }
+    
+    if lives&lt;=0
+    {
+        audio_stop_all();
+        if instance_exists(obj_audio_loop) instance_destroy(obj_audio_loop);
+        show_message("Game over.# #Try again.");
+        room_goto(rm_title);
+    }
+}
+else
+{
+    image_speed=0;
 }
 
-if lives&lt;=0
+if obj_input.start
 {
-    show_message("Game over.# #Try again.")
-    game_restart();
+    instance_create(0,0,obj_pause);
 }
 </string>
           </argument>
@@ -185,14 +225,21 @@ if lives&lt;=0
             <string>///Drawing stuff
 
 //First draw self
-image_alpha=1-(immune/11);
+if global.pause==0
+{
+    image_alpha=1-(immune/11);
+}
+image_blend=c_white;
 draw_self();
 
 //Scarf?
 draw_set_alpha(1)
 draw_set_colour(c_orange);
-var cy = sin(current_time/600)+1;
-var by = sin(current_time/400)+1;
+if global.pause==0
+{
+    cy = sin(current_time/600)+1;
+    by = sin(current_time/400)+1;
+}
 draw_line_width(x-(2*image_xscale),y-3,x-1,y-3,2)
 draw_line_width(x-(10*image_xscale),y-(3*cy),x-(2*image_xscale),y-3,2)
 draw_line_width(x-(13*image_xscale),y-(3*by),x-(2*image_xscale),y-3,2)

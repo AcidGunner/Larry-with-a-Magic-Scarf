@@ -20,6 +20,8 @@
       <sound>sound\snd_fall</sound>
       <sound>sound\snd_dash</sound>
       <sound>sound\snd_checkpoint</sound>
+      <sound>sound\boot1</sound>
+      <sound>sound\boot2</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -39,6 +41,7 @@
       <sprite>sprites\spr_block1</sprite>
       <sprite>sprites\spr_test</sprite>
       <sprite>sprites\spr_checkpoint</sprite>
+      <sprite>sprites\spr_logo</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\spr_enemy1_idle</sprite>
@@ -47,19 +50,23 @@
   <backgrounds name="background">
     <background>background\bg_back1</background>
     <background>background\bg_back2</background>
+    <background>background\bg_back3</background>
     <background>background\bg_tileset</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\audio_loop_sound.gml</script>
     <script>scripts\init_globals_mus.gml</script>
+    <script>scripts\drawTextA.gml</script>
+    <script>scripts\get_version.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
+    <font>fonts\logofont</font>
+    <font>fonts\logofont2</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_debug</object>
-    <object>objects\obj_first</object>
     <object>objects\obj_larry</object>
     <object>objects\obj_collision</object>
     <object>objects\obj_collision_slope</object>
@@ -75,12 +82,16 @@
     <object>objects\obj_door</object>
     <object>objects\obj_dialogue</object>
     <object>objects\obj_gui</object>
+    <object>objects\obj_logomain</object>
+    <object>objects\obj_pause</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_logo</room>
     <room>rooms\rm_title</room>
     <room>rooms\rm_dialogue</room>
     <room>rooms\rm_room1</room>
     <room>rooms\rm_room2</room>
+    <room>rooms\rm_room3</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
