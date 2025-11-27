@@ -36,6 +36,10 @@ else if room=rm_room2
 {
     audio_loop_sound(global._music[2],global._st[2],global._en[2],44100,0);
 }
+else if room=rm_room3
+{
+    audio_loop_sound(global._music[3],global._st[3],global._en[3],44100,0);
+}
 </string>
           </argument>
         </arguments>
@@ -59,6 +63,21 @@ else if room=rm_room2
           <argument>
             <kind>1</kind>
             <string>draw_text(5,315,"["+string(score)+"]");
+if room==rm_room4
+{
+    draw_set_valign(fa_center);
+    draw_set_halign(fa_middle);
+    draw_text(320,120,
+    "There was supposed to be an epic bossfight.
+But I can't code sadly. Sorry guys. :(
+
+I had 4 days left till jam end. Well.
+Consider this as an End game screen for now.
+
+Wish me luck ^_^")
+    draw_set_valign(fa_top);
+    draw_set_halign(fa_left);
+}
 for (var i = 0; i &lt; lives; i++)
 {
     var _x = 5+(i*12);

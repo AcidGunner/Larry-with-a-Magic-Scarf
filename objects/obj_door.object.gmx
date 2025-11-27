@@ -40,6 +40,12 @@
         global.spawny=280;
         room_goto(rm_room3);
     }
+    else if room=rm_room3
+    {
+        global.spawnx=32;
+        global.spawny=280;
+        room_goto(rm_room4);
+    }
 }
 </string>
           </argument>

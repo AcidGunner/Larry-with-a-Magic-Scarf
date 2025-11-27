@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>3</page>
-    <xoffset>357</xoffset>
-    <yoffset>-101</yoffset>
+    <page>0</page>
+    <xoffset>-81</xoffset>
+    <yoffset>-37</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="-1" name="bg_back1" x="0" y="0" htiled="-1" vtiled="-1" hspeed="-1" vspeed="0" stretch="0"/>
@@ -103,6 +103,12 @@
     <instance objName="obj_checkpoint" x="4864" y="152" name="inst_3A82BBCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door" x="5672" y="200" name="inst_562810C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_gui" x="0" y="208" name="inst_9A77BA33" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="mbstart" x="576" y="32" name="inst_D389CD47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="mbleft" x="64" y="304" name="inst_E0626C80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="mbright" x="176" y="304" name="inst_6B5BE723" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="mbz" x="512" y="304" name="inst_C9E34C03" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="mbx" x="576" y="192" name="inst_2748D42A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="mbup" x="64" y="192" name="inst_ADEA28A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_tileset" x="0" y="224" w="16" h="16" xo="0" yo="0" id="10000001" name="inst_B1443C11" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

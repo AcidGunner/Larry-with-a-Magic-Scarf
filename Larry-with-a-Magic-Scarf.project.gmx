@@ -12,6 +12,8 @@
       <sound>sound\mus_stwib</sound>
       <sound>sound\mus_evtow</sound>
       <sound>sound\mus_danger</sound>
+      <sound>sound\mus_unknyet</sound>
+      <sound>sound\mus_fight</sound>
     </sounds>
     <sounds name="SFX">
       <sound>sound\snd_jump</sound>
@@ -33,6 +35,7 @@
       <sprite>sprites\spr_larry_jump</sprite>
       <sprite>sprites\spr_larry_walk</sprite>
       <sprite>sprites\spr_larry_title</sprite>
+      <sprite>sprites\spr_larry_logo</sprite>
     </sprites>
     <sprites name="Debug">
       <sprite>sprites\spr_block</sprite>
@@ -45,6 +48,16 @@
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\spr_enemy1_idle</sprite>
+    </sprites>
+    <sprites name="Mobile">
+      <sprite>sprites\mobiledown</sprite>
+      <sprite>sprites\mobileleft</sprite>
+      <sprite>sprites\mobileright</sprite>
+      <sprite>sprites\mobileselect</sprite>
+      <sprite>sprites\mobilestart</sprite>
+      <sprite>sprites\mobileup</sprite>
+      <sprite>sprites\mobilex</sprite>
+      <sprite>sprites\mobilez</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -66,24 +79,38 @@
     <font>fonts\logofont2</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_debug</object>
-    <object>objects\obj_larry</object>
-    <object>objects\obj_collision</object>
-    <object>objects\obj_collision_slope</object>
-    <object>objects\obj_slope</object>
-    <object>objects\obj_platform</object>
-    <object>objects\obj_input</object>
-    <object>objects\obj_test</object>
-    <object>objects\obj_enemy1</object>
-    <object>objects\obj_audio_loop</object>
-    <object>objects\obj_title</object>
-    <object>objects\obj_enemy_collision</object>
-    <object>objects\obj_checkpoint</object>
-    <object>objects\obj_door</object>
-    <object>objects\obj_dialogue</object>
-    <object>objects\obj_gui</object>
-    <object>objects\obj_logomain</object>
-    <object>objects\obj_pause</object>
+    <objects name="mobil">
+      <object>objects\mbdown</object>
+      <object>objects\mbleft</object>
+      <object>objects\mbright</object>
+      <object>objects\mbselect</object>
+      <object>objects\mbstart</object>
+      <object>objects\mbup</object>
+      <object>objects\mbx</object>
+      <object>objects\mbz</object>
+    </objects>
+    <objects name="main">
+      <object>objects\obj_larry</object>
+      <object>objects\obj_enemy1</object>
+      <object>objects\obj_title</object>
+      <object>objects\obj_checkpoint</object>
+      <object>objects\obj_door</object>
+    </objects>
+    <objects name="debug">
+      <object>objects\obj_debug</object>
+      <object>objects\obj_collision</object>
+      <object>objects\obj_collision_slope</object>
+      <object>objects\obj_slope</object>
+      <object>objects\obj_platform</object>
+      <object>objects\obj_input</object>
+      <object>objects\obj_test</object>
+      <object>objects\obj_audio_loop</object>
+      <object>objects\obj_enemy_collision</object>
+      <object>objects\obj_dialogue</object>
+      <object>objects\obj_gui</object>
+      <object>objects\obj_logomain</object>
+      <object>objects\obj_pause</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_logo</room>
@@ -92,6 +119,8 @@
     <room>rooms\rm_room1</room>
     <room>rooms\rm_room2</room>
     <room>rooms\rm_room3</room>
+    <room>rooms\rm_room4</room>
+    <room>rooms\rm_control</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

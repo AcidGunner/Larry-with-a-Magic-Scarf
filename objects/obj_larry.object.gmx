@@ -167,7 +167,7 @@ if global.pause==0
     else if move==-1 cam_sway=300;
     
     // Smooth stuff?
-    view_xview[0]=lerp(view_xview[0],x-cam_sway,0.06);
+    if room!=rm_room4 view_xview[0]=lerp(view_xview[0],x-cam_sway,0.06);
     movsp=lerp(movsp,3,0.06);
     jmpsp=lerp(jmpsp,7,0.1);
     immune=lerp(immune,0,0.06);

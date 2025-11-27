@@ -78,7 +78,7 @@ global.spawny=200;
           <argument>
             <kind>1</kind>
             <string>draw_self();
-draw_text(20,20,"Larry with a Magic Scarf [JAM Version]");
+draw_text(20,20,"Larry with a Magic Scarf [JAM VERSION]");
 draw_text(235,45+5*sin(current_time/800),get_version());
 
 draw_text(20,60,"KEYBOARD CONTROLS:
@@ -88,7 +88,8 @@ GAMEPAD CONTROLS:
 LAxis/DPad - Move, A/Cross - Jump,
 X/Square - Dash
 
-JAM SUBMITION CONDIDATE 1 (JSC1)");
+MOBILE CONTROLS:
+really?");
 
 draw_text(20,320+5*sin(current_time/2000),"[Press Start to begin.]")
 

@@ -73,7 +73,7 @@ stick_rv=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (os_type==os_win32 or os_type==os_windows) &amp;&amp; !gamepad_is_connected(0)
+            <string>if (os_type==os_win32 or os_type==os_windows or os_type==os_android) &amp;&amp; !gamepad_is_connected(0)
 {
     up=keyboard_check(vk_up);
     down=keyboard_check(vk_down);
