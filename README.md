@@ -8,5 +8,5 @@ Source code for Larry with a Magic Scarf Jam version
 > The game's version is currently at 0.05a! OST and sprites may differ
 
 > [!IMPORTANT]
-
 > To compile, use GameMaker 1.4.9999.
+
